@@ -1,0 +1,41 @@
+:host {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 4rem minmax(0, 1fr) 4rem;
+
+  .navbar {
+    background-color: rgb(81, 81, 182);
+  }
+
+  .main-content {
+    background-color: pink;
+
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr);
+
+    .side-nav {
+      background-color: rgb(39, 155, 155);
+    }
+
+    .side-nav-content {
+      background-color: salmon;
+
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      overflow: auto;
+
+      .right-side {
+        background-color: maroon;
+      }
+    }
+  }
+
+  footer {
+    background-color: rgb(52, 155, 52);
+  }
+}

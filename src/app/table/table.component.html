@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns" (click)="headerClicked(column)" [class.selected]="column === selectedColumn">
+        {{ column.label }}
+        <ng-container *ngIf="column === selectedColumn">
+          <ng-container *ngIf="sortDirection === 'asc'">asc</ng-container>
+          <ng-container  *ngIf="sortDirection === 'desc'">desc</ng-container>
+        </ng-container>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows" (click)="selectRow(row)" [class.selected]="row === selectedRow">
+      <td *ngFor="let column of columns">
+        {{ row[column.property] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<mat-paginator *ngIf="true"></mat-paginator>
